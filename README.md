@@ -5,7 +5,7 @@ stock bidding code challenge
 
 exchanged ideas with @sumanyu.
 
-`python interface.py history.txt control_input.txt control_output.txt bid_stream_1.txt`
+`python forbid.py history.txt control_input.txt control_output.txt bid_stream_1.txt`
 
 ## maxheap
 ### time complexity
