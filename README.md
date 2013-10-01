@@ -1,11 +1,15 @@
+exchanged ideas with sumanyu sharma.
+
 ## done
 read history
 heap
+find top bids
+take input command
 
 ## todo
-take input command, send to output control
-find top bids
+send to output control
 receive bid numbers, add to heap
+thread multiple input files
 synchronization for 4 files
 
 ## assumptions
