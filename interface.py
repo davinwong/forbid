@@ -1,4 +1,4 @@
-import sys
+import sys, heapq
 
 # command line arguments
 history = sys.argv[1]
@@ -11,6 +11,21 @@ bid_stream_1 = sys.argv[4]
 # print control_output
 # print bid_stream_1
 
+# min heap with negative numbers
+bid_heap = []
+heapq.heapify(bid_heap)
+
 history_file = open(history)
-history_data = history_file.readlines()
-print history_data
+
+for line in history_file:
+    heapq.heappush(bid_heap, int(line.strip()))
+history_file.close()
+
+
+# heapq.heapify(history_data)
+
+
+while bid_heap:
+    print heapq.heappop(bid_heap)
+
+print bid_heap
