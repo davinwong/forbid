@@ -18,7 +18,7 @@ heapq.heapify(bid_heap)
 history_file = open(history)
 
 for line in history_file:
-    heapq.heappush(bid_heap, int(line.strip()))
+    heapq.heappush(bid_heap, -1*int(line.strip()))
 history_file.close()
 
 
@@ -26,6 +26,6 @@ history_file.close()
 
 
 while bid_heap:
-    print heapq.heappop(bid_heap)
+    print heapq.heappop(-1*bid_heap)
 
 print bid_heap
