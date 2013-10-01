@@ -16,12 +16,5 @@ def main():
     interface = Interface(bid_market, control_input, control_output, bid_stream_1)
     interface.open_control_input()
 
-    # print 'go'
-    # print bid_market.top_bids(5, 3)
-    # print 'no'
-    # print bid_market.top_bids(4, 3)
-
-    # print bid_market.bid_heap
-
 if __name__ == "__main__":
     main()
