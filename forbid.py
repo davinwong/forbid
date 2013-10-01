@@ -12,7 +12,9 @@ def main():
 
     interface = Interface(control_input, control_output, bid_stream_1)
 
-    bid_market = BidMarket(history)
+    bid_market = BidMarket()
+    bid_market.import_history(history)
+
     print 'go'
     print bid_market.top_bids(5, 3)
     print 'no'

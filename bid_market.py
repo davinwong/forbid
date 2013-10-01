@@ -4,14 +4,12 @@ import heapq
 # heapq.heapify(history_data)
 
 class BidMarket:
-    def __init__(self, history):
-        self.history = history
+    def __init__(self):
         self.bid_heap = []
         heapq.heapify(self.bid_heap)
-        self.import_history()
 
-    def import_history(self):
-        history_file = open(self.history)
+    def import_history(self, history):
+        history_file = open(history)
 
         for line in history_file:
             heapq.heappush(self.bid_heap, -1*int(line.strip()))
