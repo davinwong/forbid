@@ -4,11 +4,13 @@ from bid_market import BidMarket
 
 
 def main():
+    DATA_FILES_FOLDER_PATH = 'data_files/'
+
     # command line arguments
-    history = sys.argv[1]
-    control_input = sys.argv[2]
-    control_output = sys.argv[3]
-    bid_stream_1 = sys.argv[4]
+    history = DATA_FILES_FOLDER_PATH + sys.argv[1]
+    control_input = DATA_FILES_FOLDER_PATH + sys.argv[2]
+    control_output = DATA_FILES_FOLDER_PATH + sys.argv[3]
+    bid_stream_1 = DATA_FILES_FOLDER_PATH + sys.argv[4]
 
     bid_market = BidMarket()
     bid_market.import_history(history)
