@@ -1,10 +1,9 @@
 import heapq
 
-# min heap with negative numbers
-# heapq.heapify(history_data)
 
 class BidMarket:
     def __init__(self):
+        # min heap with negative numbers
         self.bid_heap = []
         heapq.heapify(self.bid_heap)
 

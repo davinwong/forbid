@@ -1,4 +1,4 @@
-import sys, time, os
+import sys
 from interface import Interface
 from bid_market import BidMarket
 
@@ -13,7 +13,12 @@ def main():
     bid_market = BidMarket()
     bid_market.import_history(history)
 
-    interface = Interface(bid_market, control_input, control_output, bid_stream_1)
+    interface = Interface(
+        bid_market,
+        control_input,
+        control_output,
+        bid_stream_1)
+
     interface.open_control_input()
 
 if __name__ == "__main__":

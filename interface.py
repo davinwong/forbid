@@ -1,4 +1,7 @@
-import sys, time, os, heapq, threading, Queue
+import time
+import os
+import threading
+
 
 class Interface:
     def __init__(self, bid_market, control_input, control_output, bid_stream_1):
@@ -11,7 +14,7 @@ class Interface:
         """ some stack overflow code"""
 
         #Set the filename and open the file
-        file = open(self.control_input,'r')
+        file = open(self.control_input, 'r')
 
         #Find the size of the file and move to the end
         st_results = os.stat(self.control_input)
