@@ -1,10 +1,11 @@
-=======
 forbid
 ======
 
 stock bidding code challenge
 
 exchanged ideas with @sumanyu.
+
+`python interface.py history.txt control_input.txt control_output.txt bid_stream_1.txt`
 
 ## maxheap
 ### time complexity
@@ -31,6 +32,7 @@ Using a hash table would add in O(1), but would require looping through the enti
 - receive bid numbers, add to heap
 - thread multiple input files
 - synchronization for 4 files
+- queue?
 
 ## assumptions
 - finish receiving history before dealing with commands 
