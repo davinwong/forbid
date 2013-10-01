@@ -6,7 +6,8 @@ stock bidding code challenge
 
 exchanged ideas with @sumanyu.
 
-## Maxheap 
+## maxheap
+### time complexity
 - access top m bids O(logn) for reasonable m
 - add bid O(logn)
 
@@ -15,6 +16,9 @@ The most common operations in this problem are adding new data and retrieving th
 Retrieving top bids from a sorted array would be O(1), but keeping a sorted array could be more expensive because adding a new value requires finding the correct position for it, looping through the array in O(n). 
 
 Using a hash table would add in O(1), but would require looping through the entire set to find the top bids, O(n).
+
+### space complexity
+- O(n), all data stored in memory
 
 ## done
 - read history
