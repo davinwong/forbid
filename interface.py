@@ -26,6 +26,6 @@ history_file.close()
 
 
 while bid_heap:
-    print heapq.heappop(-1*bid_heap)
+    print -1*heapq.heappop(bid_heap)
 
 print bid_heap
