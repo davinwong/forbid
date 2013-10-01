@@ -2,9 +2,10 @@ import sys
 from interface import Interface
 from bid_market import BidMarket
 
+DATA_FILES_FOLDER_PATH = 'data_files/'
+
 
 def main():
-    DATA_FILES_FOLDER_PATH = 'data_files/'
 
     # command line arguments
     history = DATA_FILES_FOLDER_PATH + sys.argv[1]
