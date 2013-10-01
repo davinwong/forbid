@@ -1,4 +1,10 @@
-exchanged ideas with sumanyu sharma.
+=======
+forbid
+======
+
+stock bidding code challenge
+
+exchanged ideas with @sumanyu.
 
 ## done
 read history
