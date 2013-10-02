@@ -43,8 +43,7 @@ class Interface:
                         requested_bids = int(input_command[2])
                         print self.bid_market.top_bids(total_bids, requested_bids)
                     if input_command[0] == 'end':
-                        print end
-                        # sys.exit()
+                        sys.exit()
                     LOCK.release()
                 except:
                     LOCK.release()

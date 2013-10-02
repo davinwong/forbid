@@ -30,6 +30,12 @@ def main():
     bid_stream_3 = BidStream(bid_stream_file_3, bid_market)
     bid_stream_4 = BidStream(bid_stream_file_4, bid_market)
 
+    # make daemons so threads close with program
+    bid_stream_1.daemon = True
+    bid_stream_2.daemon = True
+    bid_stream_3.daemon = True
+    bid_stream_4.daemon = True
+
     bid_stream_1.start()
     bid_stream_2.start()
     bid_stream_3.start()
