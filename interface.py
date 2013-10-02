@@ -67,7 +67,6 @@ class BidStream(threading.Thread):
         file.seek(st_size)
 
         while 1:
-            print "while"
             where = file.tell()
             line = file.readline()
             if not line:
