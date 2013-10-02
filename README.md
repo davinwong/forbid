@@ -11,7 +11,7 @@ Add bid: Add a new line containing a number to bid1.txt and save.
 
 Code challenge: http://codercharts.com/puzzle/high-speed-trading
 
-Collaborate: @sumanyu.
+Collaborate: @sumanyu
 
 ## maxheap
 ### time complexity
