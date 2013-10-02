@@ -5,9 +5,13 @@ forbid uses synchronized multithreading (lock) to collect data from four bid str
 
 `python forbid.py history.txt input.txt output.txt bid1.txt bid2.txt bid3.txt bid4.txt`
 
-code challenge: http://codercharts.com/puzzle/high-speed-trading
+View top bids: Add a new line containing `top 5 4` (top 4 bids of 5 total) to input.txt and save.
 
-collaborate: @sumanyu.
+Add bid: Add a new line containing a number to bid1.txt and save.
+
+Code challenge: http://codercharts.com/puzzle/high-speed-trading
+
+Collaborate: @sumanyu.
 
 ## maxheap
 ### time complexity
@@ -28,14 +32,13 @@ Using a hash table would add in O(1), but would require looping through the enti
 - heap
 - find top bids
 - take input command
-- ~receive bid numbers, add to heap
-- ~thread multiple input files
-- ~synchronization for 4 files
+- receive bid numbers, add to heap
+- thread multiple input files
+- ~synchronization
 
 ## todo
 - send to output control
 - if not enough data, wait then send
 
 ## assumptions
-- finish receiving history before dealing with commands 
-- interactive file starts blank (with newline)
+- finish receiving history before dealing with commands
