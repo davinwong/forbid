@@ -8,14 +8,13 @@ LOCK = threading.Lock()
 
 
 class Interface:
-    def __init__(self, bid_market, control_input, control_output, bid_stream_file_1):
+    def __init__(self, bid_market, control_input, control_output):
         self.bid_market = bid_market
         self.control_input = control_input
         self.control_output = control_output
-        self.bid_stream_file_1 = bid_stream_file_1
         self.command_queue = Queue.Queue()
 
-    def control_input_stream(self):
+    def open_control_input_stream(self):
         """ some stack overflow code"""
 
         #Set the filename and open the file

@@ -3,18 +3,17 @@ from interface import Interface, BidStream
 from bid_market import BidMarket
 
 DATA_FILES_FOLDER_PATH = 'data_files/'
+NUMBER_BID_STREAMS = 4
+
 
 def main():
     # command line arguments
     history = DATA_FILES_FOLDER_PATH + sys.argv[1]
     control_input = DATA_FILES_FOLDER_PATH + sys.argv[2]
     control_output = DATA_FILES_FOLDER_PATH + sys.argv[3]
-    bid_stream_file_1 = DATA_FILES_FOLDER_PATH + sys.argv[4]
-    bid_stream_file_2 = DATA_FILES_FOLDER_PATH + sys.argv[5]
-    bid_stream_file_3 = DATA_FILES_FOLDER_PATH + sys.argv[6]
-    bid_stream_file_4 = DATA_FILES_FOLDER_PATH + sys.argv[7]
-
-    print bid_stream_file_1
+    bid_stream_files = []
+    for i in range(0, NUMBER_BID_STREAMS):
+        bid_stream_files.append(DATA_FILES_FOLDER_PATH + sys.argv[4+i])
 
     bid_market = BidMarket()
     bid_market.import_history(history)
@@ -22,26 +21,18 @@ def main():
     interface = Interface(
         bid_market,
         control_input,
-        control_output,
-        bid_stream_file_1)
+        control_output)
 
-    bid_stream_1 = BidStream(bid_stream_file_1, bid_market)
-    bid_stream_2 = BidStream(bid_stream_file_2, bid_market)
-    bid_stream_3 = BidStream(bid_stream_file_3, bid_market)
-    bid_stream_4 = BidStream(bid_stream_file_4, bid_market)
+    bid_streams = []
+    for i in range(0, NUMBER_BID_STREAMS):
+        bid_streams.append(BidStream(bid_stream_files[i], bid_market))
 
-    # make daemons so threads close with program
-    bid_stream_1.daemon = True
-    bid_stream_2.daemon = True
-    bid_stream_3.daemon = True
-    bid_stream_4.daemon = True
+        # make daemons so threads close with program
+        bid_streams[i].daemon = True
 
-    bid_stream_1.start()
-    bid_stream_2.start()
-    bid_stream_3.start()
-    bid_stream_4.start()
+        bid_streams[i].start()
 
-    interface.control_input_stream()
+    interface.open_control_input_stream()
 
 if __name__ == "__main__":
     main()
