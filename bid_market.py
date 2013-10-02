@@ -2,6 +2,9 @@ import heapq
 
 
 class BidMarket:
+    """
+    uses heapq as a maxheap to return top bids and add new bids efficiently
+    """
     def __init__(self):
         # min heap with negative numbers
         self.bid_heap = []

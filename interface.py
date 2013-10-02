@@ -10,6 +10,9 @@ LOCK = threading.Lock()
 
 
 class Interface:
+    """
+    listens to input.txt for requests for top bids
+    """
     def __init__(self, bid_market, control_input, control_output):
         self.bid_market = bid_market
         self.control_input = control_input
@@ -56,6 +59,9 @@ class Interface:
 
 
 class BidStream(threading.Thread):
+    """
+    receives numbers from a bid.txt file, adds them to market
+    """
     def __init__(self, bid_stream_file, bid_market):
         self.bid_stream_file = bid_stream_file
         self.bid_market = bid_market
