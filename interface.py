@@ -4,6 +4,8 @@ import os
 import threading
 import Queue
 
+# Lock allows 1 thread to access the bid market at a time
+# adding/reading bids synchronously prevents interference with each other
 LOCK = threading.Lock()
 
 
