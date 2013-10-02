@@ -25,7 +25,3 @@ class BidMarket:
         heapq.heappush(self.bid_heap, -1*bid)
 
 # remove from heap, add them back
-# print heapq.nsmallest(3, bid_heap)
-
-# while bid_heap:
-#     print -1*heapq.heappop(bid_heap)
