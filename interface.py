@@ -54,11 +54,9 @@ class BidStream(threading.Thread):
         self.bid_stream_file = bid_stream_file
         self.bid_market = bid_market
         threading.Thread.__init__(self)
-        print "started"
 
     def run(self):
         #Set the filename and open the file
-        print "running!"
         file = open(self.bid_stream_file, 'r')
 
         #Find the size of the file and move to the end
