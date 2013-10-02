@@ -21,6 +21,9 @@ class BidMarket:
             print "old data"
             return False
 
+    def insert_bid(self, bid):
+        heapq.heappush(self.bid_heap, -1*bid)
+
 # remove from heap, add them back
 # print heapq.nsmallest(3, bid_heap)
 
