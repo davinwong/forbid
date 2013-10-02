@@ -77,10 +77,9 @@ class BidStream(threading.Thread):
 
                 try:
                     bid = int(input_command[0])
-                    print bid
+                    # print bid
                     self.bid_market.insert_bid(bid)
-                    ##
-                    print self.bid_market.bid_heap
+                    # print self.bid_market.bid_heap
                     LOCK.release()
                 except:
                     LOCK.release()
