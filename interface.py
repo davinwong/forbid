@@ -41,7 +41,10 @@ class Interface:
                     if input_command[0] == 'top':
                         total_bids = int(input_command[1])
                         requested_bids = int(input_command[2])
-                        print self.bid_market.top_bids(total_bids, requested_bids)
+                        top_bids = self.bid_market.top_bids(total_bids, requested_bids)
+
+                        # convert numbers to strings, join with space, return positives
+                        print " ".join(map(str, map(lambda x: -1*x, top_bids)))
                     if input_command[0] == 'end':
                         sys.exit()
                     LOCK.release()
