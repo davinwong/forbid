@@ -3,7 +3,7 @@ forbid
 
 forbid uses synchronized multithreading (lock) to collect data from four bid streams, then completes requests to display the top bids. 
 
-`python forbid.py history.txt control_input.txt control_output.txt bid_stream_file_1.txt bid_stream_file_2.txt bid_stream_file_3.txt bid_stream_file_4.txt`
+`python forbid.py history.txt control_input.txt control_output.txt bid_stream_1.txt bid_stream_2.txt bid_stream_3.txt bid_stream_4.txt`
 
 code challenge: http://codercharts.com/puzzle/high-speed-trading
 
