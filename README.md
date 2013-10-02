@@ -26,13 +26,13 @@ Using a hash table would add in O(1), but would require looping through the enti
 - heap
 - find top bids
 - take input command
+- ~receive bid numbers, add to heap
+- ~thread multiple input files
+- ~synchronization for 4 files
 
 ## todo
 - send to output control
-- receive bid numbers, add to heap
-- thread multiple input files
-- synchronization for 4 files
-- queue?
+- if not enough data, wait then send
 
 ## assumptions
 - finish receiving history before dealing with commands 
