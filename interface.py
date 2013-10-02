@@ -1,3 +1,4 @@
+import sys
 import time
 import os
 import threading
@@ -41,6 +42,8 @@ class Interface:
                         total_bids = int(input_command[1])
                         requested_bids = int(input_command[2])
                         print self.bid_market.top_bids(total_bids, requested_bids)
+                    if input_command[0] == 'end':
+                        # sys.exit()
                     LOCK.release()
                 except:
                     LOCK.release()
